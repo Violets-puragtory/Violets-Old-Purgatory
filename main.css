@@ -1,0 +1,14 @@
+
+<style>
+    p{
+        animation-name: slide-left;
+        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+
+    @keyframes slide-left {
+        
+    }
+
+</style>
