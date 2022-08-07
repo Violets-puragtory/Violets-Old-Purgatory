@@ -1,0 +1,19 @@
+<style>
+    p{
+        animation-name: slide-right;
+        animation-delay: 0s;
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+
+    @keyframes slide-right {
+        0% {
+            left: 150%;
+            
+        }
+        100%{
+            left: 0px;
+        }
+    }
+
+</style>
