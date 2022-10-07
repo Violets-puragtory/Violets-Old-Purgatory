@@ -1,0 +1,18 @@
+img {
+    animation-name: capybara;
+    animation-duration: 200s;
+    animation-timing-function:cubic-bezier(0.47, 0, 0.745, 0.715);
+    width: 100%;
+    position: absolute;
+    top: 30%;
+}
+
+@keyframes capybara {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360000deg);
+    }
+}
+
