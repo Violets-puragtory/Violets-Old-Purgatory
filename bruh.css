@@ -2,14 +2,28 @@
 
 
         animation: hello 2s forwards paused,
-    violent-rotation 0.25s 3s infinite paused linear;  
+    violent-rotation 0.25s 12s infinite paused linear;  
+    filter: saturate(7.5)
     }
 
     @keyframes violent-rotation {
-        from {
+        0% {
             transform: rotate(0deg);
         }
-        to {
+
+        25%{
+            transform: rotate(90deg);
+        }
+
+        50%{
+            transform: rotate(180deg);
+        }
+
+        75%{
+            transform: rotate(216deg);
+        }
+
+        100% {
             transform: rotate(360deg);
         }
     }
