@@ -12,7 +12,6 @@ function play() {
    }
 
    sleep(10000).then(() => {
-    //// code
     close()
     window.close()
     self.close()
