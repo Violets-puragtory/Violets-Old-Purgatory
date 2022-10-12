@@ -1,4 +1,5 @@
 function UwUExplodesViolently() {
     document.getElementById("body").remove()
-    let bowomp = ""
+    const bowomp = new Audio("deltarune explosion greenscreen.mp3");
+    bowomp.play()
 }

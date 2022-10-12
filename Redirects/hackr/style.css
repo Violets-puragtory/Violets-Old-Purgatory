@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300&display=swap');
 
 body {
-    background-image: linear-gradient(red, orange, yellow, lime, green, teal, skyblue, blue, black);
+    background-image: radial-gradient(red, orange, yellow, lime, green, teal, skyblue, blue, red);
 }
 
 * {
     color:black;
-    font-family: 'Comic Neue', cursive, 'Verdana', Times, serif;
+    font-family: 'Comic Neue', cursive, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 100px;
+    background: -webkit-linear-gradient(red, orange, yellow, lime, green, teal, skyblue, blue, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
