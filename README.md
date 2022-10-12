@@ -1,2 +1,1 @@
-Hi hello welcome to my website I dont know why or how it exists but it does so happy birthday!
-
+Simple website to catalogue whatever i feel like.
