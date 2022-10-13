@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300&display=swap');
+
+.hack {
+    font-family: 'Comic Neue', cursive, 'Verdana', Times, serif;
+    background-color: white;
+    color: green;
+}
+
 .OldWebsiteLink {
     font-family: "Verdana", Arial, serif;
     color: #592be2;
