@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
-    background-color: rgb(45, 20, 120);
+    background-color: rgb(34, 0, 66);
 }
 
 * {
@@ -11,6 +11,24 @@ body {
     font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
 }
 
-div {
+h1, h2, h3, h4, h5, h6 {
+    font-size: 60px
+}
 
+a {
+    color:rgb(0, 247, 255);
+}
+
+p, a {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+div {
+    border-radius: 75px;
+    border-style:dashed;
+}
+
+.linkdiv {
+    width: 750px;
 }
