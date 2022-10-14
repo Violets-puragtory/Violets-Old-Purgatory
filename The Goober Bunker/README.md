@@ -1,1 +1,0 @@
-Simple website to catalogue whatever i feel like.
