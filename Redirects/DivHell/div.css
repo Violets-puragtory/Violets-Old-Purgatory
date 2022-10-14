@@ -4,14 +4,7 @@ body {
     background-image: radial-gradient(rgb(72, 23, 119), rgb(34, 0, 66));
 }
 
-* {
-    color: rgb(249, 195, 255);
-    margin: auto;
-    text-align: center;
-    font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,.fakelink {
     font-size: 60px;
 }
 
@@ -19,7 +12,7 @@ a {
     color:rgb(0, 247, 255);
 }
 
-p, a {
+p, a, .fakelink {
     font-size: 20px;
     line-height: 30px;
 }
@@ -34,6 +27,16 @@ div {
 }
 
 .linkdiver {
+    padding-top:5%;
     width: 90%;
-    min-height: 175px;
+    height: 90%;
+    border-radius: 1000px;
+}
+
+
+* {
+    color: rgb(249, 195, 255);
+    margin: auto;
+    text-align: center;
+    font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
 }

@@ -33,3 +33,7 @@ div {
     width: 750px;
 }
 
+.fakelink {
+    text-decoration: none !important;
+    color:rgb(249, 195, 255) !important;
+}
