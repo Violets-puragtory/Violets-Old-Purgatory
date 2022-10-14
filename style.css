@@ -32,3 +32,8 @@ div {
 .linkdiv {
     width: 750px;
 }
+
+.linkdiver {
+    width: 90%;
+    min-height: 175px;
+}
