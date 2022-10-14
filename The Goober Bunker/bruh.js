@@ -1,6 +1,6 @@
     
 function play() {
-    var audio = new Audio('./Sounds/Penis Music.mp3');
+    var audio = new Audio('./The Goober Bunker/Sounds/Penis Music.mp3');
     audio.volume = 0.35
     audio.play();
 
