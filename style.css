@@ -31,7 +31,7 @@ div {
     color:rgb(249, 195, 255) !important;
 }
 
-* {
+*:not(body)  {
     color: rgb(249, 195, 255);
     margin: auto;
     text-align: center;
