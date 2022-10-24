@@ -9,7 +9,7 @@ body {
 
 .leftaligndiv {
     border-color: white;
-    border-style: inset;
+    border-style: solid;
     left: 0%;
     right: auto;
     width: 50%;
