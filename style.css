@@ -5,6 +5,7 @@ body {
 }
 
 .leftaligndiv {
+    position:absolute;
     border-color: white;
     border-style: solid;
     left: 0%;
@@ -16,6 +17,7 @@ body {
 }
 
 .rightaligndiv {
+    position:absolute;
     border-color: white;
     border-style: solid;
     right: 0%;
@@ -29,5 +31,5 @@ body {
 * {
     color: rgb(220, 200, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: larger;
+    font-size: 200%;
 }
