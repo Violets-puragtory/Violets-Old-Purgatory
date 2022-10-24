@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik+Glitch&family=Rubik:wght@300&display=swap');
 
-
-* {
-    color: rgb(220, 200, 255);
-    font-size: 200%;
-    font-family: 'Rubik',  Verdana, Geneva, Tahoma, sans-serif;
-}
-
 body {
     background-image: linear-gradient(rgb(76, 0, 147), rgb(41, 0, 60));
 }
@@ -24,4 +17,10 @@ body {
 
 title {
     font-size: 300%;
+}
+
+* {
+    color: rgb(220, 200, 255);
+    font-size: 200%;
+    font-family: 'Rubik',  Verdana, Geneva, Tahoma, sans-serif;
 }
