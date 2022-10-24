@@ -1,45 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-.subpage {
-    white-space:nowrap;
-    width: 70px;
-    border-style: solid;
+* {
+    color: rgb(220, 200, 255);
+    font-size: 200%;
 }
 
 body {
-    background-image: radial-gradient(rgb(72, 23, 119), rgb(34, 0, 66));
+    background-image: linear-gradient(rgb(76, 0, 147), rgb(41, 0, 60));
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-size: 60px;
+.leftaligndiv {
+    border-color: white;
+    border-style: inset;
+    left: 0%;
+    right: auto;
+    width: 50%;
+    display: flexbox;
+    margin: 0, 0, 0, 0;
+    padding: 0, 0, 0, 0;
 }
 
-a {
-    color:rgb(0, 247, 255);
-}
-
-p, a {
-    font-size: 20px;
-    line-height: 30px;
-}
-
-div {
-    border-radius: 150px;
-    border-style:dashed;
-}
-
-.linkdiv {
-    width: 750px;
-}
-
-.fakelink, .fakelink:link, .fakelink:visited, .fakelink:hover, .fakelink:active {
-    text-decoration: none !important;
-    color:rgb(249, 195, 255) !important;
-}
-
-*:not(body)  {
-    color: rgb(249, 195, 255);
-    margin: auto;
-    text-align: center;
-    font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+title {
+    font-size: 300%;
 }
