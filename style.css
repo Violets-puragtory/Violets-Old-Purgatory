@@ -20,8 +20,8 @@ body {
     position:absolute;
     border-color: white;
     border-style: solid;
-    right: 30px;
-    left: auto;
+    right: auto;
+    left: 50%;
     width: 50%;
     display: flexbox;
     margin: 0, 0, 0, 0;
@@ -31,5 +31,5 @@ body {
 * {
     color: rgb(220, 200, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 300%;
+    font-size: 200%;
 }
