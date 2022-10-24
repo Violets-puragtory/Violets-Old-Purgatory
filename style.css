@@ -8,7 +8,7 @@ body {
     position:absolute;
     border-color: white;
     border-style: solid;
-    left: 0%;
+    left: 0px;
     right: auto;
     width: 50%;
     display: flexbox;
@@ -20,7 +20,7 @@ body {
     position:absolute;
     border-color: white;
     border-style: solid;
-    right: 0%;
+    right: 30px;
     left: auto;
     width: 50%;
     display: flexbox;
@@ -31,5 +31,5 @@ body {
 * {
     color: rgb(220, 200, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 200%;
+    font-size: 300%;
 }
