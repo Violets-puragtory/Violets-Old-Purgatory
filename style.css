@@ -5,9 +5,11 @@
 }
 
 .borderdiv {
+    margin: auto;
+    padding: auto;
     width: 50%;
     border-style: solid;
-    border-radius: 100%/100%;
+    border-radius: 100%;
     color: white;
     
 }
