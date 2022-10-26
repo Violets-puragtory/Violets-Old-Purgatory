@@ -1,3 +1,12 @@
+function  disco() {
+    const button =  $("#discorbutton")
+    button.html("IF I HAD ONE!!!")
+    button.css("font-size", "3em")
+    button.css("background-color", "transparent")
+    button.css("color",  "white")
+    button.css("border-color", "transparent")
+    button.css("font-family", "Rubik Glitch")
+}
 
 
 function makeid(length) {
@@ -10,6 +19,60 @@ function makeid(length) {
     return result;
 }
 
+function Socials() {
+    $("#socials").css("display", "block")
+    $(".button").prop("disabled",true);
+
+    const text = $("#buttontext");
+    text.css("font-family", "Rubik Glitch");
+    text.css("whitespace", "wrap");
+    const newtext =  "If you need to get in contact with me or just are interested, you can find (most) of my socials below."
+    text.css("width",  "100%")
+    
+    width = $( window ).width() / 80;
+
+    
+
+    for (var i = 0, len = 25*2; i < len; i++) {
+        const x = i/2
+        setTimeout(() => {
+
+            let fullglitch = "" 
+            
+            for (var c = 0, len = x; c < len; c++) {
+                glitch = makeid((width / 4) * x) + '<br>'
+                fullglitch = fullglitch + glitch
+                text.html(fullglitch) 
+            }
+
+           
+        }, i * (20/2));
+    };
+    setTimeout(() => {
+        text.html(newtext)
+        text.css("font-family",  "Rubik, Verdana")
+        text.css("font-size", "1.5em")
+        $(".button").css("border-color", "white")
+        $("a").attr("target", "_blank");
+        $(".baller > ul > *").css("font-size", "0.5em")
+        $(".baller > .fakeheader").css("font-size", "1em")
+        $(".baller").css("border-color", "white")
+        
+        $(".baller").css("border-color", "transparent")
+        $("baller > *").css("color",  "transparent")
+        $("baller > * > *").css("color", "transparent")
+    
+        $(".baller").css("font-size", "0em")
+        $("baller > *").css("font-size",  "0em")
+        $("baller > * > *").css("font-size", "0em")
+    }, 550);
+
+    setTimeout(() => {
+        $("#Socials").css("border-color", "blueviolet")
+        $(".button").prop("disabled",false);
+    }, 600);
+}
+
 
 function aboutme() {
 
@@ -19,7 +82,7 @@ function aboutme() {
     text.css("font-family", "Rubik Glitch");
     text.css("whitespace", "wrap");
     
-    newtext  =  "My name is Violet, I am a young-ish mediocre (at best) 'developer'. I hope to one day be a game developer, but as of now it doesnt seem that way is going to go well. I've been learning/learnt a few languages, most being quite simple. A list can be found below. (Up to date as of October 26th 2022)"
+    newtext  =  "My name is Violet, I am a young-ish mediocre (at best) 'developer'. I hope to one day be a game developer, but as of now it doesnt seem that way is going to go well. I've been learning/learnt a few languages, most being quite simple. A list can be found below. (Up to date as of October 25th 2022)"
 
     text.css("width",  "100%")
     
@@ -51,12 +114,19 @@ function aboutme() {
         $(".baller > ul > *").css("font-size", "0.5em")
         $(".baller > .fakeheader").css("font-size", "1em")
         $(".baller").css("border-color", "white")
+        
+        $(".baller").css("border-color", "white")
+        $("baller > *").css("color",  "white")
+        $("baller > * > *").css("color", "white")
+    
+        $(".baller").css("font-size", "1em")
+        $("baller > *").css("font-size",  "1em")
+        $("baller > * > *").css("font-size", "1em")
     }, 550);
 
     setTimeout(() => {
         $("#aboutme").css("border-color", "blueviolet")
         $(".button").prop("disabled",false);
     }, 600);
-    
 }
 
