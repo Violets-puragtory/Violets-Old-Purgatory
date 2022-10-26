@@ -25,20 +25,21 @@ function aboutme() {
     
     width = $( window ).width() / 80;
 
-
+    
 
     for (var i = 0, len = 25; i < len; i++) {
-        const x = i
+        const x = i/2
         setTimeout(() => {
-            var glitch = makeid((width / 10) * x) + '<br>'
-            var fullglitch = glitch
+
+            let fullglitch = "a" 
             
-            for (var i = 0, len = 10; i < len; i++) {
-                glitch = makeid((width / 10) * x) + '<br>'
+            for (var c = 0, len = x; c < len; c++) {
+                glitch = makeid((width / 4) * x) + '<br>'
                 fullglitch = fullglitch + glitch
+                text.html(fullglitch) 
             }
 
-            text.html(fullglitch) 
+           
         }, i * 20);
     };
     setTimeout(() => {
@@ -47,8 +48,9 @@ function aboutme() {
         text.css("font-size", "1.5em")
         $(".button").css("border-color", "white")
         $("a").attr("target", "_blank");
-        $(".baller > ul > *").css("font-size", "0.7em")
-        $(".baller > .fakeheader").css("font-size", "2em")
+        $(".baller > ul > *").css("font-size", "0.5em")
+        $(".baller > .fakeheader").css("font-size", "1em")
+        $(".baller").css("border-color", "white")
     }, 550);
 
     setTimeout(() => {
