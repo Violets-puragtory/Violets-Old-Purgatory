@@ -1,35 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik+Glitch&family=Rubik:wght@300&display=swap');
 
+.baller > ul > * {
+    font-size: 0em;
+    max-width: 500px;
+    margin: auto;
+}
+
+.fakeheader {
+    font-size: 2em !important;
+}
+
+.borderdiv {
+    margin: auto;
+    padding: auto;
+    min-width: 450px;
+    max-width: 1000px;
+    border-style: solid;
+    border-radius: 100%;
+    color: white;
+    
+}
+
+html {
+    min-height: 100%;
+}
+
 body {
-    background-image: linear-gradient(rgb(76, 0, 147), rgb(41, 0, 60));
+    min-height: 100%;
+    background-color:black;
+    background-image: linear-gradient(rgb(75, 0, 150), black);
 }
 
-.leftaligndiv {
-    position:absolute;
-    border-color: white;
-    border-style: solid;
-    left: 0px;
-    right: auto;
-    width: 50%;
-    display: flexbox;
-    margin: 0, 0, 0, 0;
-    padding: 0, 0, 0, 0;
+h1 {
+    font-size: 1.75em;
 }
 
-.rightaligndiv {
-    position:absolute;
-    border-color: white;
+p {
+    font-size: 1.25em;
+    color: white;
+}
+
+button {
+    min-width: 6em;
+    line-height: 1.75em;
+    font-size: 1em;
+    margin: auto;
+    padding: auto;
+    background-color: rgb(50, 0, 200);
     border-style: solid;
-    right: auto;
-    left: 50%;
-    width: 50%;
-    display: flexbox;
-    margin: 0, 0, 0, 0;
-    padding: 0, 0, 0, 0;
+    border-radius: 20%/50%;
+    color: white;
+}
+
+button:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(125, 82, 255);
+}
+
+button:disabled {
+    color: rgb(255, 255, 255);
+    background-color: rgb(125, 82, 255);
 }
 
 * {
-    color: rgb(220, 200, 255);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: larger;
+    display: flexbox;
+    text-align: center;
+    font-size: 1.3em;
+    color: rgb(240, 200, 250);
+    font-family: 'Rubik', Verdana, 'Roboto', Geneva, Tahoma, sans-serif;
 }
