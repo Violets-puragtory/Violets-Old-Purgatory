@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik+Glitch&family=Rubik:wght@300&display=swap');
 
+.baller > ul > * {
+    font-size: 0em;
+    max-width: 500px;
+    margin: auto;
+}
+
 .fakeheader {
     font-size: 2em !important;
 }
@@ -7,7 +13,8 @@
 .borderdiv {
     margin: auto;
     padding: auto;
-    width: 50%;
+    min-width: 450px;
+    max-width: 1000px;
     border-style: solid;
     border-radius: 100%;
     color: white;
@@ -43,6 +50,16 @@ button {
     border-style: solid;
     border-radius: 20%/50%;
     color: white;
+}
+
+button:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(125, 82, 255);
+}
+
+button:disabled {
+    color: rgb(255, 255, 255);
+    background-color: rgb(125, 82, 255);
 }
 
 * {
