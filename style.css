@@ -2,12 +2,19 @@
 
 .baller > ul > * {
     font-size: 0em;
-    max-width: 500px;
+    max-width: 80%;
     margin: auto;
 }
 
+.baller {
+    border-style: solid;
+    color: transparent;
+    border-color: transparent;
+    /*min-width: 400px;*/
+}
+
 .fakeheader {
-    font-size: 2em !important;
+    font-size: 1em;
 }
 
 .borderdiv {
