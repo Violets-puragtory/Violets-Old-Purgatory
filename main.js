@@ -19,7 +19,7 @@ function aboutme() {
     text.css("font-family", "Rubik Glitch");
     text.css("whitespace", "wrap");
     
-    newtext  =  "My name is Violet, I am a young-ish mediocre (at best) 'developer'. I hope to one day be a game developer, but as of now it doesnt seem that way is going to go well. I've been learning/learnt a few languages, most being quite simple. A list can be found below. (Up to date as of October 25th 2022)"
+    newtext  =  "My name is Violet, I am a young-ish mediocre (at best) 'developer'. I hope to one day be a game developer, but as of now it doesnt seem that way is going to go well. I've been learning/learnt a few languages, most being quite simple. A list can be found below. (Up to date as of October 26th 2022)"
 
     text.css("width",  "100%")
     
