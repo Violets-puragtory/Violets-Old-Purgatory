@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik+Glitch&family=Rubik:wght@300&display=swap');
 
+a {
+    animation-name: pulse;
+    animation-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: rgb(200, 175, 250);
+
+}
+
 .baller > ul > * {
     font-size: 0em;
     max-width: 80%;
@@ -19,10 +29,11 @@
 .borderdiv {
     margin: auto;
     padding: auto;
-    min-width: 450px;
-    max-width: 50%;
+    width: 70%;
+    min-width: 15em;
+    max-width: 25em;
     border-style: solid;
-    border-radius: 100%;
+    border-radius: 25%/60%;
     color: white;
     
 }
@@ -51,7 +62,8 @@ button {
     line-height: 1.75em;
     font-size: 1em;
     margin: auto;
-    padding: auto;
+    margin-top: 7px;
+    margin-bottom:7px;
     background-color: rgb(50, 0, 200);
     border-style: solid;
     border-radius: 20%/50%;
@@ -75,3 +87,25 @@ button:disabled {
     color: rgb(240, 200, 250);
     font-family: 'Rubik', Verdana, 'Roboto', Geneva, Tahoma, sans-serif;
 }
+
+/* Animations */
+
+@keyframes pulse {
+  0% {
+    color: rgb(200, 175, 250);
+  }
+
+  100% {
+    color: white;
+  }
+}
+
+@keyframes redpulse {
+    0% {
+      color: red;
+    }
+  
+    100% {
+      color: white;
+    }
+  }
