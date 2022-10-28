@@ -29,26 +29,27 @@ function makeid(length) {
 }
 
 function Projects() {
+    $("#socials").css("display", "none")
     $(".button").prop("disabled",true);
 
     const text = $("#buttontext");
     text.css("font-family", "Rubik Glitch");
     text.css("whitespace", "wrap");
-    const newtext =  "Here are some projects I am/have been working on. They've been split into sections for convienience, but <b>do  not expect any of these to ever 'release' or finish</b>"
+    const newtext =  "Here are some projects I am/have been working on. They've been split into sections for convienience,<br><b style='color:red'> but  do  not expect any of these to ever 'release' or finish</b>"
     text.css("width",  "100%")
     
     width = $( window ).width() / 80;
 
     
 
-    for (var i = 0, len = 25*2; i < len; i++) {
+    for (var i = 0, len = 50; i < len; i++) {
         const x = i/2
         setTimeout(() => {
 
             let fullglitch = "" 
             
             for (var c = 0, len = x; c < len; c++) {
-                glitch = makeid((width / 4) * x) + '<br>'
+                glitch = makeid((width / 7) * x) + '<br>'
                 fullglitch = fullglitch + glitch
                 text.html(fullglitch) 
             }
@@ -95,14 +96,14 @@ function Socials() {
 
     
 
-    for (var i = 0, len = 25*2; i < len; i++) {
+    for (var i = 0, len = 50; i < len; i++) {
         const x = i/2
         setTimeout(() => {
 
             let fullglitch = "" 
             
             for (var c = 0, len = x; c < len; c++) {
-                glitch = makeid((width / 4) * x) + '<br>'
+                glitch = makeid((width / 7) * x) + '<br>'
                 fullglitch = fullglitch + glitch
                 text.html(fullglitch) 
             }
@@ -152,20 +153,20 @@ function aboutme() {
 
     
 
-    for (var i = 0, len = 25; i < len; i++) {
+    for (var i = 0, len = 50; i < len; i++) {
         const x = i/2
         setTimeout(() => {
 
-            let fullglitch = "a" 
+            let fullglitch = "" 
             
             for (var c = 0, len = x; c < len; c++) {
-                glitch = makeid((width / 4) * x) + '<br>'
+                glitch = makeid((width / 7) * x) + '<br>'
                 fullglitch = fullglitch + glitch
                 text.html(fullglitch) 
             }
 
            
-        }, i * 20);
+        }, i * (20/2));
     };
     setTimeout(() => {
         $("#socials").css("display", "none")
