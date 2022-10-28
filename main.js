@@ -1,3 +1,12 @@
+let winwidth = $( window ).width();
+
+var limitFunc = function(){
+    winwidth = $( window ).width();
+};
+
+window.addEventListener("resize", limitFunc);
+
+
 function  disco() {
     const button =  $("#discorbutton")
     button.html("IF I HAD ONE!!!")
@@ -17,6 +26,59 @@ function makeid(length) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     return result;
+}
+
+function Projects() {
+    $(".button").prop("disabled",true);
+
+    const text = $("#buttontext");
+    text.css("font-family", "Rubik Glitch");
+    text.css("whitespace", "wrap");
+    const newtext =  "Here are some projects I am/have been working on. They've been split into sections for convienience, but <b>do  not expect any of these to ever 'release' or finish</b>"
+    text.css("width",  "100%")
+    
+    width = $( window ).width() / 80;
+
+    
+
+    for (var i = 0, len = 25*2; i < len; i++) {
+        const x = i/2
+        setTimeout(() => {
+
+            let fullglitch = "" 
+            
+            for (var c = 0, len = x; c < len; c++) {
+                glitch = makeid((width / 4) * x) + '<br>'
+                fullglitch = fullglitch + glitch
+                text.html(fullglitch) 
+            }
+
+           
+        }, i * (20/2));
+    };
+    setTimeout(() => {
+        text.html(newtext)
+        text.css("font-family",  "Rubik, Verdana")
+        text.css("font-size", "1.5em")
+        $(".button").css("border-color", "white")
+        $("a").attr("target", "_blank");
+        $(".baller > ul > *").css("font-size", "0.5em")
+        $(".baller > .fakeheader").css("font-size", "1em")
+        $(".baller").css("border-color", "white")
+        
+        $(".baller").css("border-color", "transparent")
+        $("baller > *").css("color",  "transparent")
+        $("baller > * > *").css("color", "transparent")
+    
+        $(".baller").css("font-size", "0em")
+        $("baller > *").css("font-size",  "0em")
+        $("baller > * > *").css("font-size", "0em")
+    }, 550);
+
+    setTimeout(() => {
+        $("#Socials").css("border-color", "blueviolet")
+        $(".button").prop("disabled",false);
+    }, 600);
 }
 
 function Socials() {
@@ -106,6 +168,7 @@ function aboutme() {
         }, i * 20);
     };
     setTimeout(() => {
+        $("#socials").css("display", "none")
         text.html(newtext)
         text.css("font-family",  "Rubik, Verdana")
         text.css("font-size", "1.5em")
