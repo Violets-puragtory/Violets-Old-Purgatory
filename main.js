@@ -29,26 +29,28 @@ function makeid(length) {
 }
 
 function Projects() {
+    $("#projectsmore").css("font-size", "0em")
+    $("#socials").css("display", "none")
     $(".button").prop("disabled",true);
 
     const text = $("#buttontext");
     text.css("font-family", "Rubik Glitch");
     text.css("whitespace", "wrap");
-    const newtext =  "Here are some projects I am/have been working on. They've been split into sections for convienience, but <b>do  not expect any of these to ever 'release' or finish</b>"
+    const newtext =  "Here are some projects I am/have been working on. They've been split into sections for convienience,<br><a id='ankcha' target='_self' href='./subdirs/Projects/ProjectApology/index.html' style='animation-name: redpulse;'> but  do  not expect any of these to ever 'release' or finish</a>"
     text.css("width",  "100%")
     
     width = $( window ).width() / 80;
 
     
 
-    for (var i = 0, len = 25*2; i < len; i++) {
+    for (var i = 0, len = 50; i < len; i++) {
         const x = i/2
         setTimeout(() => {
 
             let fullglitch = "" 
             
             for (var c = 0, len = x; c < len; c++) {
-                glitch = makeid((width / 4) * x) + '<br>'
+                glitch = makeid((width / 7) * x) + '<br>'
                 fullglitch = fullglitch + glitch
                 text.html(fullglitch) 
             }
@@ -61,7 +63,7 @@ function Projects() {
         text.css("font-family",  "Rubik, Verdana")
         text.css("font-size", "1.5em")
         $(".button").css("border-color", "white")
-        $("a").attr("target", "_blank");
+        $("a:not(#ankcha)").attr("target", "_blank");
         $(".baller > ul > *").css("font-size", "0.5em")
         $(".baller > .fakeheader").css("font-size", "1em")
         $(".baller").css("border-color", "white")
@@ -82,6 +84,8 @@ function Projects() {
 }
 
 function Socials() {
+
+    $("#projectsmore").css("font-size", "0em")
     $("#socials").css("display", "block")
     $(".button").prop("disabled",true);
 
@@ -95,14 +99,14 @@ function Socials() {
 
     
 
-    for (var i = 0, len = 25*2; i < len; i++) {
+    for (var i = 0, len = 50; i < len; i++) {
         const x = i/2
         setTimeout(() => {
 
             let fullglitch = "" 
             
             for (var c = 0, len = x; c < len; c++) {
-                glitch = makeid((width / 4) * x) + '<br>'
+                glitch = makeid((width / 7) * x) + '<br>'
                 fullglitch = fullglitch + glitch
                 text.html(fullglitch) 
             }
@@ -144,7 +148,7 @@ function aboutme() {
     text.css("font-family", "Rubik Glitch");
     text.css("whitespace", "wrap");
     
-    newtext  =  "My name is Violet, I am a young-ish mediocre (at best) 'developer'. I hope to one day be a game developer, but as of now it doesnt seem that way is going to go well. I've been learning/learnt a few languages, most being quite simple. A list can be found below. (Up to date as of October 25th 2022)"
+    newtext  =  "My name is Violet, I am a young-ish mediocre (at best) 'developer'. I hope to one day be a game developer, but as of now it doesnt seem that way is going to go well. I've been learning/learnt a few languages, most being quite simple. A list can be found below. (Up to date as of October 28th 2022)"
 
     text.css("width",  "100%")
     
@@ -152,22 +156,23 @@ function aboutme() {
 
     
 
-    for (var i = 0, len = 25; i < len; i++) {
+    for (var i = 0, len = 50; i < len; i++) {
         const x = i/2
         setTimeout(() => {
 
-            let fullglitch = "a" 
+            let fullglitch = "" 
             
             for (var c = 0, len = x; c < len; c++) {
-                glitch = makeid((width / 4) * x) + '<br>'
+                glitch = makeid((width / 7) * x) + '<br>'
                 fullglitch = fullglitch + glitch
                 text.html(fullglitch) 
             }
 
            
-        }, i * 20);
+        }, i * (20/2));
     };
     setTimeout(() => {
+        $("#projectsmore").css("font-size", "1.5em")
         $("#socials").css("display", "none")
         text.html(newtext)
         text.css("font-family",  "Rubik, Verdana")
