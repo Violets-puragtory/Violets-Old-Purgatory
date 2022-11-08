@@ -1,0 +1,70 @@
+.col-6 {
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;
+    height: 35vw;
+    width: 35vw;
+}
+
+.col-6:hover {
+    border-width: 5px;
+    border-color: white;
+}
+
+
+
+#a1 {
+    background-color: darkred;
+}
+
+#a2 {
+    background-color: rgb(122, 122, 0);
+}
+
+#a3 {
+    background-color: darkblue;
+}
+
+#a4 {
+    background-color: darkgreen;
+}
+
+#a1:not(*:disabled):hover {
+    background-color: red !important;
+}
+
+#a2:not(*:disabled):hover {
+    background-color: yellow !important;
+}
+
+#a3:not(*:disabled):hover {
+    background-color: blue !important;
+}
+
+#a4:not(*:disabled):hover {
+    background-color: green !important;
+}
+
+body, html {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+*:not(.col-6) {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flexbox;
+    margin: auto;
+    color: white;
+    animation-name: fadein;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-iteration-count: infinite;
+}
