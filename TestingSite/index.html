@@ -18,7 +18,7 @@
     <script src="./main.js"></script>
     <link rel="stylesheet" href="./style.css">
 
-    <title>Violet's homepage</title>
+    <title>Violet's purgatory</title>
 </head>
 
 <body>
@@ -33,29 +33,63 @@
 
     <hr>
 
+        <h1>
+            Mega Funky Buttons!<br><br>
+        </h1>
+        <h2>General Buttons</h2>
+
     <button id="boutmebutton" onclick="boutme()" disabled>About Me</button>
     <button id="socialsbutton" onclick="social()">Socials</button>
-    <button>About Me</button>
+    <br><br><br>
+
+    <h1>Game Talkey</h1>
+    <button id="roguebutton" onclick="RogueLikes()">My Fav 'Roguelikes'</button>
+    
 
     <div id="things">
+
         <div id="aboutme">
             <hr>
             <h1>About Me:</h1>
             <p>
                 My name is Violet. I'm a 13yo programmer who is too ambitious for my own good.
                 I plan on becoming a game developer in the near future, but for now all I really have to show
-                is some really, really mediocre JQuery/Javascript, CSS, and HTML. :3 <br><br>
-                I hope that my website doesn't suck, and if you encounter anything particularly note worthy or just have some nice
-                tips/advice or want me to change something, you can always find me on Github OR go to "My Socials" above for other
-                platforms I reside on.
+                is some really, really mediocre JQuery/Javascript, CSS, and HTML. :3
+                
+                <br><br>
+
+                I spend most of my time playing shitty games and doing other things that a child would do because I am
+                one. I'm a very sensitive nutcase and constructive criticism is my second biggest fear! (If you have any
+                reccomendations for this section please contact me I think its kinda underdeveloped.)
+
+                <br><br>
+
+                I hope that my website doesn't suck, and if you encounter anything particularly note worthy or just have
+                some nice
+                tips/advice or want me to change something, you can always find me on Github OR go to "My Socials" above
+                for other
+                platforms I reside on. (I am most active on Discord and Matrix)
             </p>
         </div>
+
+        <div style="display: none;" id="roguelikesilike">
+            <hr>
+            <h1 style="color: limegreen;">Rogue likes I reccomend in no particular order :)</h1>
+            <div class="ror2" onclick="reveal('#ror2hide')">
+                <h1>Risk of Rain 2</h1>
+                <div id="ror2hide" class="hidden">
+                    <p></p>
+                    <iframe src="https://store.steampowered.com/widget/632360/" frameborder="0" width="646" height="190"></iframe>
+                </div>
+            </div>
+        </div>
+
 
         <div style="display: none;" id="thesocials">
             <hr>
             <p>Discord: Violet#3379</p>
             <p>Matrix/Element: @violet:imsus.gay</p>
-            <a href="https://steampowered.com/community/Violet-The-Thigh-High-Obtainer">Steam: Violet-The-Thigh-High-Obtainer</a>
+            <a href="https://steamcommunity.com/id/Violet-The-Thigh-high-obtainer/">Steam: Violet</a>
             <p style="line-height: 1000px;"><br></p>
             <a href="./begin/index.html">Youtube: <strike style="color: red; font-family: 'Rubik Glitch'"">#$%^@0224gxfH</strike></a>
         </div>

@@ -1,3 +1,24 @@
+.hidden {
+    display: none;
+}
+
+.ror2 {
+    background-color: darkblue;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.5;
+
+    transition: all 2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.ror2:hover {
+    opacity: 1;
+    background-color: rgb(15, 50, 75);
+    border-color: white;
+    border-width: 5px;
+}
+
 #pulser {
     animation-name: pulsebody;
     animation-duration: 5s;
@@ -31,6 +52,7 @@ body {
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 20px;
+    padding-bottom: 20px;
     background-color: rgb(50, 0, 100);
     background-image: linear-gradient(rgb(60, 0, 150), black);
     animation-name: fadein;

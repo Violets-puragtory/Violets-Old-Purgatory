@@ -42,3 +42,18 @@ function social() {
     $("button").prop("disabled", false)
     $("#socialsbutton").prop("disabled", true)
 }
+
+function RogueLikes() {
+    $("#things > *").hide("slow");
+    $("#roguelikesilike").show("slow");
+    $("button").prop("disabled", false)
+    $("#roguebutton").prop("disabled", true)
+}
+
+function reveal(item) {
+    if($(item).is(":visible")){
+        $(item).hide("slow")
+    } else {
+        $(item).show("slow")
+    }
+}
