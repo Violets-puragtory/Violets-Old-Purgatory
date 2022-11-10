@@ -1,5 +1,6 @@
 # welcome
-#to
+to
 #squidwards
-#tiki
+tiki
 #land
+:D
