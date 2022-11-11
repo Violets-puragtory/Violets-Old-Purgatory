@@ -1,0 +1,140 @@
+.hidden {
+    display: none;
+}
+
+.ror2 {
+    background-color: darkblue;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.5;
+
+    transition: all 2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.ror2:hover {
+    opacity: 1;
+    background-color: rgb(15, 50, 75);
+    border-color: white;
+    border-width: 5px;
+}
+
+#pulser {
+    animation-name: pulsebody;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-iteration-count: infinite;
+}
+
+a {
+    color: blue;
+}
+
+html {
+    height: 1px;
+    background-color: black;
+}
+
+hr {
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+    border: 0;
+    width: 90%;
+    margin: auto;
+    height: 3px !important;
+    opacity: 1;
+    color: transparent;
+    background-image: linear-gradient(90deg, transparent, blueviolet, transparent);
+}
+
+body {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(50, 0, 100);
+    background-image: linear-gradient(rgb(60, 0, 150), black);
+    animation-name: fadein;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+
+button {
+    background-color: black;
+    color: white;
+    border-color: white;
+    border-style: double;
+    transition: color 0.5s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+button:hover {
+    background-color: rgb(150, 80, 255);
+    color: black;
+}
+
+button:active {
+    background-color: rgb(140, 0, 255);
+    color: white;
+}
+
+button:disabled {
+    background-color: white;
+    color: black;
+}
+
+body, html {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+p, a:not(#maintitle > *, #splashtext > *) {
+    font-size: 150%;
+    color: rgb(200, 125, 255);
+}
+
+h1 {
+    font-size: 250%;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    font-size: 225%;
+    color: rgb(235, 220, 255);
+}
+
+h3, button {
+    font-size: 200%;
+    color: rgb(210, 171, 255);
+}
+
+h4 {
+    font-size: 175%;
+    color: rgb(190, 133, 255);
+}
+
+* {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flexbox;
+    margin: auto;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulsebody {
+    0% {
+        height: 200%;
+    }
+    100% {
+        height: 400%;
+    }
+}
