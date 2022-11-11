@@ -1,111 +1,208 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik+Glitch&family=Rubik:wght@300&display=swap');
+.imgmost {
+    aspect-ratio: 2.5;
+    width:  90vw
+}
+
+#roguelikesilike > hr {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    border: 0;
+    width: 100%;
+    margin: auto;
+    height: 2px !important;
+    opacity: 0.25;
+    color: transparent;
+    background-image: linear-gradient(90deg, transparent, white, transparent);
+}
+
+.hidden {
+    display: none;
+}
+
+.ror2 {
+    padding: 10px;
+    background-color: darkblue;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.75;
+    transition: all 5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.ror2:hover {
+    opacity: 1;
+    background-color: rgb(15, 50, 75);
+    border-color: white;
+    border-width: 5px;
+}
+
+.ETG {
+    padding: 10px;
+    background-color: rgb(70, 52, 35);
+    border-color: rgb(141, 115, 0);
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.75;
+    transition: all 5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.ETG:hover {
+    opacity: 1;
+    background-color: rgb(75, 50, 15);
+    border-color: rgb(255, 230, 0);
+    border-width: 5px;
+}
+
+.WOL {
+    padding: 10px;
+    background-color: rgb(40, 0, 50);
+    border-color: rgb(20, 0, 200);
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.75;
+    transition: all 5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.WOL:hover {
+    opacity: 1;
+    background-color: rgb(75, 0, 30);
+    border-color: rgb(60, 0, 255);
+    border-width: 5px;
+}
+
+.STS {
+    padding: 10px;
+    background-color: rgb(100, 30, 0);
+    border-color: rgb(255, 0, 255);
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.75;
+    transition: all 5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.STS:hover {
+    opacity: 1;
+    background-color: rgb(75, 0, 30);
+    border-color: rgb(60, 0, 255);
+    border-width: 5px;
+}
+
+#pulser {
+    animation-name: pulsebody;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-iteration-count: infinite;
+}
 
 a {
-    animation-name: pulse;
-    animation-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    color: rgb(200, 175, 250);
-
-}
-
-.baller > ul > * {
-    font-size: 0em;
-    max-width: 80%;
-    margin: auto;
-}
-
-.baller {
-    border-style: solid;
-    color: transparent;
-    border-color: transparent;
-}
-
-.fakeheader {
-    font-size: 1em;
-}
-
-.borderdiv {
-    margin: auto;
-    padding: auto;
-    width: 70%;
-    min-width: 15em;
-    max-width: 25em;
-    border-style: solid;
-    border-radius: 25%/60%;
-    color: white;
-    
+    color: blue;
 }
 
 html {
-    min-height: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+hr {
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+    border: 0;
+    width: 90%;
+    margin: auto;
+    height: 3px !important;
+    opacity: 1;
+    color: transparent;
+    background-image: linear-gradient(90deg, transparent, blueviolet, transparent);
 }
 
 body {
-    min-height: 100%;
-    background-color:black;
-    background-image: linear-gradient(rgb(75, 0, 150), black);
-}
-
-h1 {
-    font-size: 1.75em;
-}
-
-p {
-    font-size: 1.25em;
-    color: white;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(50, 0, 100);
+    background-image: linear-gradient(rgb(60, 0, 150), black);
+    animation-name: fadein;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
 }
 
 button {
-    min-width: 6em;
-    line-height: 1.75em;
-    font-size: 1em;
-    margin: auto;
-    margin-top: 7px;
-    margin-bottom:7px;
-    background-color: rgb(50, 0, 200);
-    border-style: solid;
-    border-radius: 20%/50%;
+    background-color: black;
     color: white;
+    border-color: white;
+    border-style: double;
+    transition: color 0.5s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 button:hover {
-    color: rgb(0, 0, 0);
-    background-color: rgb(125, 82, 255);
+    background-color: rgb(150, 80, 255);
+    color: black;
+}
+
+button:active {
+    background-color: rgb(140, 0, 255);
+    color: white;
 }
 
 button:disabled {
+    background-color: white;
+    color: black;
+}
+
+body, html {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+p, a:not(#maintitle > *, #splashtext > *) {
+    font-size: 150%;
+    color: rgb(230, 200, 255);
+}
+
+h1 {
+    font-size: 250%;
     color: rgb(255, 255, 255);
-    background-color: rgb(125, 82, 255);
+}
+
+h2 {
+    font-size: 225%;
+    color: rgb(235, 220, 255);
+}
+
+h3, button {
+    font-size: 200%;
+    color: rgb(210, 171, 255);
+}
+
+h4 {
+    font-size: 175%;
+    color: rgb(190, 133, 255);
 }
 
 * {
-    display: flexbox;
     text-align: center;
-    font-size: 1.3em;
-    color: rgb(240, 200, 250);
-    font-family: 'Rubik', Verdana, 'Roboto', Geneva, Tahoma, sans-serif;
+    align-items: center;
+    justify-content: center;
+    display: flexbox;
+    margin: auto;
 }
 
-/* Animations */
-
-@keyframes pulse {
-  0% {
-    color: rgb(200, 175, 250);
-  }
-
-  100% {
-    color: white;
-  }
-}
-
-@keyframes redpulse {
+@keyframes fadein {
     0% {
-      color: red;
+        opacity: 0;
     }
-  
     100% {
-      color: white;
+        opacity: 1;
     }
-  }
+}
+
+@keyframes pulsebody {
+    0% {
+        height: 200%;
+    }
+    100% {
+        height: 400%;
+    }
+}

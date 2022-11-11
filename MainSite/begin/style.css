@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Rubik+Glitch&display=swap');
+
+body, html {
+    line-height: 25px;
+    padding-top: 4%;
+    background-color: rgb(240, 240, 240);
+}
+
+a {
+    color: rgb(0, 125, 225);
+}
+
+a:hover {
+    color:red;
+    font-family: 'Rubik Glitch';
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    text-align: center;
+    color:gray;
+}
+
+h1 {
+    font-size: 300%;
+}

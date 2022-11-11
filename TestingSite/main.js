@@ -29,22 +29,29 @@ var waitForJQuery = setInterval(function () {
 }, 10);
 
 
+function huh() {
+    $("#things > *:not(hr)").hide("slow");
+    $("#whatthis").show("slow");
+    $("button").prop("disabled", false)
+    $("#whatbutton").prop("disabled", true)
+}
+
 function boutme() {
-    $("#things > *").hide("slow");
+    $("#things > *:not(hr)").hide("slow");
     $("#aboutme").show("slow");
     $("button").prop("disabled", false)
     $("#boutmebutton").prop("disabled", true)
 }
 
 function social() {
-    $("#things > *").hide("slow");
+    $("#things > *:not(hr)").hide("slow");
     $("#thesocials").show("slow");
     $("button").prop("disabled", false)
     $("#socialsbutton").prop("disabled", true)
 }
 
 function RogueLikes() {
-    $("#things > *").hide("slow");
+    $("#things > *:not(hr)").hide("slow");
     $("#roguelikesilike").show("slow");
     $("button").prop("disabled", false)
     $("#roguebutton").prop("disabled", true)

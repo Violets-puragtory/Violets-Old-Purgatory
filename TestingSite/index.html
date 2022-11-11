@@ -15,8 +15,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
-    <script src="./main.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <script src="./main.js"></script>
 
     <title>Violet's puragtory</title>
 </head>
@@ -40,6 +40,7 @@
 
     <button id="boutmebutton" onclick="boutme()" disabled>About Me</button>
     <button id="socialsbutton" onclick="social()">Socials</button>
+    <button id="whatbutton" onclick="huh()">What??</button>
     <br><br><br>
 
     <h1>Game Talkey</h1>
@@ -47,9 +48,14 @@
     
 
     <div id="things">
-
+        <hr>
+        <div id="whatthis"  class="hidden">
+            
+            <h1>What??</h1>
+            <p>If your confused I am too, I got no idea why I made this. But, heres a complementory image to help describe this awful website!</p>
+            <img class="imgmost" src="./Images/Graphick.png"/>
+        </div>
         <div id="aboutme">
-            <hr>
             <h1>About Me:</h1>
             <p>
                 My name is Violet. I'm a 13yo programmer who is too ambitious for my own good.
@@ -73,7 +79,6 @@
         </div>
 
         <div style="display: none;" id="roguelikesilike">
-            <hr>
             <h1 style="color: limegreen;">Rogue likes I reccomend in a slightly particular order :)</h1><hr>
             <div class="STS" onclick="reveal('#stshide', 1500)">
                 <h1>Slay The Spire</h1>
@@ -157,7 +162,6 @@
 
 
         <div style="display: none;" id="thesocials">
-            <hr>
             <p>Discord: Violet#3379</p>
             <p>Matrix/Element: @violet:imsus.gay</p>
             <a href="https://steamcommunity.com/id/Violet-The-Thigh-high-obtainer/">Steam: Violet</a>
