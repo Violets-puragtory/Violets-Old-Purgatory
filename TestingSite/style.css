@@ -7,9 +7,9 @@
     border-color: white;
     border-style: solid;
     border-width: 1px;
-    opacity: 0.5;
+    opacity: 0.75;
 
-    transition: all 2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transition: all 5s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
 .ror2:hover {
@@ -90,7 +90,7 @@ body, html {
 
 p, a:not(#maintitle > *, #splashtext > *) {
     font-size: 150%;
-    color: rgb(200, 125, 255);
+    color: rgb(230, 200, 255);
 }
 
 h1 {

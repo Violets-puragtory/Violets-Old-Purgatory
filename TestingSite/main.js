@@ -50,10 +50,10 @@ function RogueLikes() {
     $("#roguebutton").prop("disabled", true)
 }
 
-function reveal(item) {
+function reveal(item, duration) {
     if($(item).is(":visible")){
-        $(item).hide("slow")
+        $(item).hide(duration)
     } else {
-        $(item).show("slow")
+        $(item).show(duration)
     }
 }
