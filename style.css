@@ -1,3 +1,90 @@
+:root {
+    --transparency: 1;
+    --barheight: 110px;
+    --stickybutcolor: limegreen;
+    --dumbbuttoncolor: red;
+}
+
+#things {
+    overflow-y: hidden;
+    transform: scaleX(1);
+}
+
+.settingsbuttons {
+    color: black;
+    transition: all 5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#mainsticker {
+    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#stickerbutton {
+    background-color: var(--stickybutcolor);
+}
+
+#dumbbutton {
+    background-color: var(--dumbbuttoncolor);
+}
+
+#settingsmenu {
+    display: none;
+    animation-name: gwain;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-direction: alternate;
+    overflow: hidden;
+    position: sticky;
+    height: 0;
+    z-index: 55;
+    background-color: rgba(0, 0, 75, 0.95);
+    min-height: 50px;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 5s;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: blueviolet;
+    opacity: 0;
+}
+
+#topbar {
+    width: calc(100vw) !important;
+    overflow-x: shown;
+    top: 0px;
+    z-index: 50;
+    background-color: rgba(0, 0, 125, 0.25);
+    opacity: 0.75;
+    min-height: 60px;
+    height: 10vh;
+    transition: all 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    user-select: none;
+    border-width: 1px;
+    border-color: darkblue;
+    border-style: solid;
+    display: flex;
+    transform: translateY(0%) translateX(-10px);
+}
+
+#topbar:hover  {
+    min-height: 70px;
+    height: 11vh;
+    background-color: rgb(0, 0, 150);
+    transform: translateY(0%) translateX(-10px);
+}
+
+#topbar > * {
+    transition: all 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: 30px;
+}
+
+#topbar > *:hover {
+    color: red;
+}
+
+#topbar:hover > * {
+    transform: scale(1.25) translateY(5%);
+} 
+
 .imgmost {
     aspect-ratio: 2.5;
     width:  90vw
@@ -36,21 +123,30 @@
     border-width: 5px;
 }
 
+#ETGback {
+    transform: scale(1);
+    transition: all 5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
 .ETG {
+    vertical-align: middle;
+    width: 88%;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     background-color: rgb(70, 52, 35);
-    border-color: rgb(141, 115, 0);
-    border-style: solid;
-    border-width: 1px;
+    outline-color: rgb(141, 115, 0);
+    outline-width: 1px;
     opacity: 0.75;
     transition: all 5s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
-.ETG:hover {
+.ETG:hover{
     opacity: 1;
     background-color: rgb(75, 50, 15);
-    border-color: rgb(255, 230, 0);
-    border-width: 5px;
+    outline-color: rgb(255, 230, 0);
+    outline-width: 5px;
+    transform: scale(0.75);
 }
 
 .WOL {
@@ -100,7 +196,6 @@ a {
 }
 
 html {
-    height: 1px;
     background-color: black;
 }
 
@@ -117,23 +212,30 @@ hr {
 }
 
 body {
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: rgb(50, 0, 100);
-    background-image: linear-gradient(rgb(60, 0, 150), black);
+    background-image: linear-gradient(rgb(35, 0, 75), black);
     animation-name: fadein;
     animation-duration: 5s;
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
 }
 
 button {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.523);
     color: white;
     border-color: white;
     border-style: double;
-    transition: color 0.5s cubic-bezier(0.39, 0.575, 0.565, 1), background-color 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: color 0.5s, background-color 0.5s;
+    margin: 1%;    
+    display: flexbox;
+    flex: auto;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: flexbox;
+    flex-direction: column-reverse;
 }
 
 button:hover {
@@ -151,6 +253,11 @@ button:disabled {
     color: black;
 }
 
+.toggle {
+    color: red;
+    font-size: inherit;
+}
+
 body, html {
     min-height: 100%;
     min-width: 100%;
@@ -158,7 +265,7 @@ body, html {
 
 p, a:not(#maintitle > *, #splashtext > *) {
     font-size: 150%;
-    color: rgb(230, 200, 255);
+    color: rgb(235, 225, 255);
 }
 
 h1 {
@@ -204,5 +311,14 @@ h4 {
     }
     100% {
         height: 400%;
+    }
+}
+
+@keyframes gwain {
+    0% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: blueviolet;
     }
 }

@@ -1,3 +1,7 @@
+var doink = 1
+var profanity = false
+
+
 var waitForJQuery = setInterval(function () {
     if (typeof $ != 'undefined') {
 
@@ -20,41 +24,111 @@ var waitForJQuery = setInterval(function () {
         }
 
 
-        document.getElementById("splashtext").innerHTML = "The worst thing since " + florb
-
-
+        document.getElementById("splashtext").innerHTML = "The worst thing since " + florb + Cookies.get("stickybar")
+        
+        setTimeout(() => {
+            if(Cookies.get('stickybar') == 'false') {
+                $("#mainsticker").css("position", "relative")
+                $("#stickerbutton").text("Sticky Bar: Off")
+                document.body.style.setProperty("--stickybutcolor", "red")
+            } else {
+                $("#mainsticker").css("position", "sticky")
+                $("#stickerbutton").text("Sticky Bar: On")
+                document.body.style.setProperty("--stickybutcolor", "limegreen")
+            }
+        }, 300);
 
         clearInterval(waitForJQuery);
     }
 }, 10);
 
 
+
+
+function settings() {
+    if(doink == 1){
+        $("#settingsmenu").show()
+        $("#settingsmenu").css("overflow-y", "scroll")
+        $("#settingsmenu").transition({
+            "height": "80vh",
+            "opacity": "1",
+            "top": "0px"
+        }, 750, 'cubic-bezier(0.445, 0.05, 0.55, 0.95)')
+        doink =  2
+    } else {
+        $("#settingsmenu").transition({
+            "height": "1vh",
+            "opacity": "0",
+            "top": "-100px"
+        }, 750, 'cubic-bezier(0.445, 0.05, 0.55, 0.95)')
+        doink = 1
+        setTimeout(() => {
+            $("#settingsmenu").hide()
+            $("#settingsmenu").css("overflow-y", "hidden")
+        }, 750);
+    }
+}
+
 function huh() {
-    $("#things > *:not(hr)").hide("slow");
-    $("#whatthis").show("slow");
+    $("#things").transition({
+        "transform": "scaleX(0)"
+}, 500, 'cubic-bezier(0.47, 0, 0.745, 0.715)')
+setTimeout(() => {
+    $("#things > *:not(hr)").hide(0);
+$("#whatthis").show();
+$("#things").transition({
+    "transform": "scaleX(1)"
+}, 500, 'cubic-bezier(0.39, 0.575, 0.565, 1)')
+}, 500);
     $("button").prop("disabled", false)
     $("#whatbutton").prop("disabled", true)
 }
 
 function boutme() {
-    $("#things > *:not(hr)").hide("slow");
-    $("#aboutme").show("slow");
+    $("#things").transition({
+        "transform": "scaleX(0)"
+}, 500, 'cubic-bezier(0.47, 0, 0.745, 0.715)')
+setTimeout(() => {
+    $("#things > *:not(hr)").hide(0);
+$("#aboutme").show();
+$("#things").transition({
+    "transform": "scaleX(1)"
+}, 500, 'cubic-bezier(0.39, 0.575, 0.565, 1)')
+}, 500);
     $("button").prop("disabled", false)
     $("#boutmebutton").prop("disabled", true)
 }
 
 function social() {
-    $("#things > *:not(hr)").hide("slow");
-    $("#thesocials").show("slow");
+    $("#things").transition({
+            "transform": "scaleX(0)"
+    }, 500, 'cubic-bezier(0.47, 0, 0.745, 0.715)')
+    setTimeout(() => {
+        $("#things > *:not(hr)").hide(0);
+    $("#thesocials").show();
+    $("#things").transition({
+        "transform": "scaleX(1)"
+    }, 500, 'cubic-bezier(0.39, 0.575, 0.565, 1)')
+    }, 500);
     $("button").prop("disabled", false)
     $("#socialsbutton").prop("disabled", true)
 }
 
 function RogueLikes() {
-    $("#things > *:not(hr)").hide("slow");
-    $("#roguelikesilike").show("slow");
+    $("#things").transition({
+        "transform": "scaleX(0)"
+    }, 500, 'cubic-bezier(0.47, 0, 0.745, 0.715)')
+setTimeout(() => {
+    $("#things > *:not(hr)").hide(0);
+$("#roguelikesilike").show();
+$("#things").transition({
+    "transform": "scaleX(1)"
+}, 500, 'cubic-bezier(0.39, 0.575, 0.565, 1)')
+}, 500);
     $("button").prop("disabled", false)
     $("#roguebutton").prop("disabled", true)
+
+    
 }
 
 function reveal(item, duration) {
@@ -64,3 +138,49 @@ function reveal(item, duration) {
         $(item).show(duration)
     }
 }
+
+function showarchive() {
+    $("#things").transition({
+        "transform": "scaleX(0)"
+}, 500, 'cubic-bezier(0.47, 0, 0.745, 0.715)')
+setTimeout(() => {
+    $("#things > *:not(hr)").hide(0);
+$("#bigarchive").show();
+$("#things").transition({
+    "transform": "scaleX(1)"
+}, 500, 'cubic-bezier(0.39, 0.575, 0.565, 1)')
+}, 500);
+    $("button").prop("disabled", false)
+    $("#archive").prop("disabled", true)
+}
+
+function setting(settingtype) {
+    if(settingtype == "stickybar") {
+        if($("#mainsticker").css("position") == "sticky") {
+            $("#mainsticker").css("position", "relative")
+            $("#stickerbutton").text("Sticky Bar: Off")
+            document.body.style.setProperty("--stickybutcolor", "red")
+            Cookies.set('stickybar', false)
+            
+        } else {
+            $("#mainsticker").css("position", "sticky")
+            $("#stickerbutton").text("Sticky Bar: On")
+            document.body.style.setProperty("--stickybutcolor", "limegreen")
+            Cookies.set('stickybar', true)
+        }
+    } else if(settingtype == "dumbbutton") {
+        if($("#mainsticker").css("position") == "sticky") {
+            $("#mainsticker").css("position", "relative")
+            $("#stickerbutton").text("Sticky Bar: Off")
+            document.body.style.setProperty("--stickybutcolor", "red")
+            Cookies.set('stickybar', false)
+            
+        } else {
+            $("#mainsticker").css("position", "sticky")
+            $("#stickerbutton").text("Sticky Bar: On")
+            document.body.style.setProperty("--stickybutcolor", "limegreen")
+            Cookies.set('stickybar', true)
+        }
+    }
+}
+

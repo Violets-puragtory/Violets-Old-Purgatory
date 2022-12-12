@@ -1,0 +1,35 @@
+hr {
+    margin: 20px;
+    border-width: 0px;
+    background: linear-gradient(90deg, transparent, blueviolet, transparent);
+    height: 1px;
+}
+
+.stupidgreenclass {
+    color: limegreen;
+}
+
+html, body {
+    width: 100vw;
+    height: 70vh;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+* {
+    color: white;
+    margin: auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-size: 2em;
+}
+
+.magical {
+    background-image: linear-gradient(90deg, green, orange);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}

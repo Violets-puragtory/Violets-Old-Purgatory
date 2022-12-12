@@ -1,0 +1,22 @@
+body, html {
+    background-color: rgb(30, 25, 40);
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+img {
+    aspect-ratio: 2.74;
+    width: 100%;
+    transform: rotate3d(10deg, 10deg, 10deg);
+}
+
+* {
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+
+p {
+    font-size: 2em;
+}
