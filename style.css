@@ -1,8 +1,12 @@
 :root {
     --transparency: 1;
     --barheight: 110px;
-    --stickybutcolor: limegreen;
+    --stickybutcolor: red;
     --dumbbuttoncolor: red;
+}
+
+#dummybuttons {
+    display: none;
 }
 
 #things {
