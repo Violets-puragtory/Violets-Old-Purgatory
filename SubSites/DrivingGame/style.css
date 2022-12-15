@@ -1,0 +1,36 @@
+body, html {
+    width: 100vw;
+    min-height: 100vh;
+    background: rgb(0, 0, 0)
+}
+
+
+#car {
+    position: absolute;
+    background: red;
+    width: 75px;
+    height: 150px;
+    transform: translateX();
+}
+
+#drivespace {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgb(45, 30, 60);
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-left: auto;
+    height: 90vh;
+    aspect-ratio: 1.7;
+    
+}
+
+* {
+    color: white;
+    margin: auto;
+}
