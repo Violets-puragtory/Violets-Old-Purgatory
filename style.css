@@ -1,34 +1,6 @@
 :root {
     --transparency: 1;
     --barheight: 110px;
-    --stickybutcolor: red;
-    --dumbbuttoncolor: red;
-}
-
-#dummybuttons {
-    display: none;
-}
-
-#things {
-    overflow-y: hidden;
-    transform: scaleX(1);
-}
-
-.settingsbuttons {
-    color: black;
-    transition: all 5s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-#mainsticker {
-    transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-#stickerbutton {
-    background-color: var(--stickybutcolor);
-}
-
-#dumbbutton {
-    background-color: var(--dumbbuttoncolor);
 }
 
 #settingsmenu {
@@ -52,28 +24,26 @@
 }
 
 #topbar {
-    width: calc(100vw) !important;
-    overflow-x: shown;
+    overflow-x: hidden;
     top: 0px;
     z-index: 50;
+    position: sticky;
     background-color: rgba(0, 0, 125, 0.25);
     opacity: 0.75;
-    min-height: 60px;
-    height: 10vh;
+    height: 60px;
     transition: all 4s cubic-bezier(0.075, 0.82, 0.165, 1);
     user-select: none;
     border-width: 1px;
     border-color: darkblue;
     border-style: solid;
     display: flex;
-    transform: translateY(0%) translateX(-10px);
+    transform: scale(1) translateY(0%);
 }
 
 #topbar:hover  {
-    min-height: 70px;
-    height: 11vh;
+    height: 65px;
     background-color: rgb(0, 0, 150);
-    transform: translateY(0%) translateX(-10px);
+    transform: scale(1.05) translateY(0%);
 }
 
 #topbar > * {
@@ -127,30 +97,21 @@
     border-width: 5px;
 }
 
-#ETGback {
-    transform: scale(1);
-    transition: all 5s cubic-bezier(0.215, 0.610, 0.355, 1);
-}
-
 .ETG {
-    vertical-align: middle;
-    width: 88%;
-    justify-content: center;
-    align-items: center;
     padding: 10px;
     background-color: rgb(70, 52, 35);
-    outline-color: rgb(141, 115, 0);
-    outline-width: 1px;
+    border-color: rgb(141, 115, 0);
+    border-style: solid;
+    border-width: 1px;
     opacity: 0.75;
     transition: all 5s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
-.ETG:hover{
+.ETG:hover {
     opacity: 1;
     background-color: rgb(75, 50, 15);
-    outline-color: rgb(255, 230, 0);
-    outline-width: 5px;
-    transform: scale(0.75);
+    border-color: rgb(255, 230, 0);
+    border-width: 5px;
 }
 
 .WOL {
@@ -216,10 +177,8 @@ hr {
 }
 
 body {
-    padding-left: 10px;
-    padding-right: 10px;
     background-color: rgb(50, 0, 100);
-    background-image: linear-gradient(rgb(35, 0, 75), black);
+    background-image: linear-gradient(rgb(60, 0, 150), black);
     animation-name: fadein;
     animation-duration: 5s;
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
@@ -269,7 +228,7 @@ body, html {
 
 p, a:not(#maintitle > *, #splashtext > *) {
     font-size: 150%;
-    color: rgb(235, 225, 255);
+    color: rgb(230, 200, 255);
 }
 
 h1 {

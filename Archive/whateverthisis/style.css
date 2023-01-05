@@ -1,0 +1,58 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    animation-name: rainbowbg;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+img {
+    animation-name: rotate;
+    animation-duration: 2000s;
+    animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+@keyframes rotate {
+    0%{
+        transform:rotate(0deg);
+    }
+
+    100%{
+        transform:rotate(140000000deg);
+    }
+}
+
+@keyframes rainbowbg {
+    0%{
+       background-color: red; 
+    }
+    14%{
+        background-color: orange; 
+    }
+    29%{
+        background-color: yellow; 
+    }
+    43%{
+        background-color: green; 
+    }
+    58%{
+        background-color: blue; 
+    }
+    72%{
+        background-color: blueviolet; 
+    }
+    86%{
+        background-color: violet; 
+    }
+    100%{
+        background-color: red;
+    }
+}

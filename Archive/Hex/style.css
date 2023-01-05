@@ -1,0 +1,91 @@
+:root {
+    --background-grid-color: rgb(64, 135, 1);
+    --background-fill-color: rgb(28, 52, 26);
+    --bgwidth: 5px;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--background-fill-color);
+    background-image: url(/Images/Grid1.png);
+    background-size: 75px;
+    background-repeat: repeat;
+}
+
+#containerofcontainers {
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    height: 100vh;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#maincontainer {
+    background-color: rgb(40, 40, 40);
+    border: solid gray 20px;
+    padding: 25px;
+    display: flex;
+}
+
+h2 {
+    background-color: rgb(0, 50, 0);
+    text-align: left !important;
+    padding-left: 8px;
+    border-radius: 20px;
+    display: flexbox;
+    font-size: 2rem;
+    padding: 0.7rem;
+}
+
+*:not(h2, img, div) {
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#maincontainer {
+    animation-name: 'fadein';
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+p {
+    font-size: 1.75rem;
+}
+
+hr {
+    border: 0.45rem solid rgb(100, 175, 100);
+    opacity: 1;
+    width: 90%;
+    margin-left: 5%;
+}
+
+
+
+#rightcolumn {
+    background-color: blue;
+}
+
+
+@keyframes fadein {
+    0%{
+        opacity: 0;
+        transform: translate(-250px);
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0px, 0px, 0px);
+    }
+}
