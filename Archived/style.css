@@ -1,0 +1,287 @@
+:root {
+    --transparency: 1;
+    --barheight: 110px;
+}
+
+#settingsmenu {
+    display: none;
+    animation-name: gwain;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-direction: alternate;
+    overflow: hidden;
+    position: sticky;
+    height: 0;
+    z-index: 55;
+    background-color: rgba(0, 0, 75, 0.95);
+    min-height: 50px;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 5s;
+    border-style: dashed;
+    border-width: 5px;
+    border-color: blueviolet;
+    opacity: 0;
+}
+
+#topbar {
+    overflow-x: hidden;
+    top: 0px;
+    z-index: 50;
+    position: sticky;
+    background-color: rgba(0, 0, 125, 0.25);
+    opacity: 0.75;
+    height: 60px;
+    transition: all 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    user-select: none;
+    border-width: 1px;
+    border-color: darkblue;
+    border-style: solid;
+    display: flex;
+    transform: scale(1) translateY(0%);
+}
+
+#topbar:hover  {
+    height: 65px;
+    background-color: rgb(0, 0, 150);
+    transform: scale(1.05) translateY(0%);
+}
+
+#topbar > * {
+    transition: all 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: 30px;
+}
+
+#topbar > *:hover {
+    color: red;
+}
+
+#topbar:hover > * {
+    transform: scale(1.25) translateY(5%);
+} 
+
+.imgmost {
+    aspect-ratio: 2.5;
+    width:  90vw
+}
+
+#roguelikesilike > hr {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    border: 0;
+    width: 100%;
+    margin: auto;
+    height: 2px !important;
+    opacity: 0.25;
+    color: transparent;
+    background-image: linear-gradient(90deg, transparent, white, transparent);
+}
+
+.hidden {
+    display: none;
+}
+
+.ror2 {
+    padding: 10px;
+    background-color: darkblue;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.75;
+    transition: all 5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.ror2:hover {
+    opacity: 1;
+    background-color: rgb(15, 50, 75);
+    border-color: white;
+    border-width: 5px;
+}
+
+.ETG {
+    padding: 10px;
+    background-color: rgb(70, 52, 35);
+    border-color: rgb(141, 115, 0);
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.75;
+    transition: all 5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.ETG:hover {
+    opacity: 1;
+    background-color: rgb(75, 50, 15);
+    border-color: rgb(255, 230, 0);
+    border-width: 5px;
+}
+
+.WOL {
+    padding: 10px;
+    background-color: rgb(40, 0, 50);
+    border-color: rgb(20, 0, 200);
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.75;
+    transition: all 5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.WOL:hover {
+    opacity: 1;
+    background-color: rgb(75, 0, 30);
+    border-color: rgb(60, 0, 255);
+    border-width: 5px;
+}
+
+.STS {
+    padding: 10px;
+    background-color: rgb(100, 30, 0);
+    border-color: rgb(255, 0, 255);
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.75;
+    transition: all 5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.STS:hover {
+    opacity: 1;
+    background-color: rgb(75, 0, 30);
+    border-color: rgb(60, 0, 255);
+    border-width: 5px;
+}
+
+#pulser {
+    animation-name: pulsebody;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-iteration-count: infinite;
+}
+
+a {
+    color: blue;
+}
+
+html {
+    background-color: black;
+}
+
+hr {
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+    border: 0;
+    width: 90%;
+    margin: auto;
+    height: 3px !important;
+    opacity: 1;
+    color: transparent;
+    background-image: linear-gradient(90deg, transparent, blueviolet, transparent);
+}
+
+body {
+    background-color: rgb(50, 0, 100);
+    background-image: linear-gradient(rgb(60, 0, 150), black);
+    animation-name: fadein;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.523);
+    color: white;
+    border-color: white;
+    border-style: double;
+    transition: color 0.5s, background-color 0.5s;
+    margin: 1%;    
+    display: flexbox;
+    flex: auto;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: flexbox;
+    flex-direction: column-reverse;
+}
+
+button:hover {
+    background-color: rgb(150, 80, 255);
+    color: black;
+}
+
+button:active {
+    background-color: rgb(140, 0, 255);
+    color: white;
+}
+
+button:disabled {
+    background-color: white;
+    color: black;
+}
+
+.toggle {
+    color: red;
+    font-size: inherit;
+}
+
+body, html {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+p, a:not(#maintitle > *, #splashtext > *) {
+    font-size: 150%;
+    color: rgb(230, 200, 255);
+}
+
+h1 {
+    font-size: 250%;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    font-size: 225%;
+    color: rgb(235, 220, 255);
+}
+
+h3, button {
+    font-size: 200%;
+    color: rgb(210, 171, 255);
+}
+
+h4 {
+    font-size: 175%;
+    color: rgb(190, 133, 255);
+}
+
+* {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flexbox;
+    margin: auto;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulsebody {
+    0% {
+        height: 200%;
+    }
+    100% {
+        height: 400%;
+    }
+}
+
+@keyframes gwain {
+    0% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: blueviolet;
+    }
+}
