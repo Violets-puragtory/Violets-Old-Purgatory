@@ -1,7 +1,7 @@
 var flippin = false
 var usecookies = false
-var bganim = Cookies.get('bganim')
-
+var bganim = 'true'
+var spamquotes = 'true'
 
 function NavMenu(next, bottun) {
     if (flippin == false) {
@@ -40,6 +40,7 @@ function enablecookies() {
         usecookies = false
         Cookies.remove('EnableCookies')
         Cookies.remove('QuoteSpam')
+        Cookies.remove('bgsetting')
     } else {
         $("#quotesbutton").css('background-color', 'green')
         $("#quotesbutton").css('color', 'white')
@@ -53,7 +54,7 @@ function enablecookies() {
 
 function setting(which) {
 if (which == 'bgsetting') {
-    if (Cookies.get('bgsetting') == 'true') {
+    if (bganim == 'true') {
         bganim = 'false'
         if (usecookies == true) {
             Cookies.set('bgsetting', 'false')
@@ -73,13 +74,15 @@ if (which == 'bgsetting') {
     }
 }
     if (which == 'spamquotes' && usecookies == true) {
-        if (Cookies.get('QuoteSpam') == 'true') {
+        if (spamquotes == 'true') {
             if (usecookies == true) {
                 Cookies.set('QuoteSpam', 'false')
             }
+            spamquotes = 'false'
             $("#quotesbutton").text('Spam Quotes: False')
             $("#quotesbutton").css('background-color', 'red')
         } else {
+            spamquotes = 'true'
             if (usecookies == true) {
                 Cookies.set('QuoteSpam', 'true')
             }
@@ -90,6 +93,21 @@ if (which == 'bgsetting') {
 }
 
 $(window).on('load', function () {
+    if (Cookies.get('EnableCookies') == 'true') {
+        usecookies = false
+        enablecookies()
+    } else {
+        usecookies = true
+        enablecookies()
+    }
+
+    if (Cookies.get('bgsetting') != null) {
+        bganim = Cookies.get('bgsetting')
+    }
+    
+    if (Cookies.get('QuoteSpam') != null) {
+        spamquotes = Cookies.get('QuoteSpam')
+    }
 
     if (Cookies.get('bgsetting') == 'false') {
         $("#backdiv").css('animation-name', 'no')
@@ -99,12 +117,11 @@ $(window).on('load', function () {
         $("#bganim").text('Animate Background: True')
         $("#bganim").css('background-color', 'green')
         $("#backdiv").css('animation-name', 'idle')
-
     }
 
-    if (Cookies.get('QuoteSpam') == 'true' | Cookies.get('QuoteSpam') == null) {
+    if (spamquotes == 'true') {
         quotes = '"'
-        for (let x = 0; x < Math.ceil(Math.random() * 20); x++) {
+        for (let x = 0; x < Math.ceil(Math.random() * 40); x++) {
             setTimeout(() => {
                 quotes = quotes + '"'
                 $("#quotes").text(quotes + "fun" + quotes)
@@ -118,14 +135,8 @@ $(window).on('load', function () {
         $("#quotesbutton").text('Spam Quotes: True')
         $("#quotesbutton").css('background-color', 'green')
     } else {
-        $("#quotes").text(fun)
-    }
-
-    if (Cookies.get('EnableCookies') == 'true') {
-        usecookies = false
-        enablecookies()
-    } else {
-        usecookies = true
-        enablecookies()
+        $("#quotes").text('fun')
+        $("#quotesbutton").text('Spam Quotes: False')
+        $("#quotesbutton").css('background-color', 'red')
     }
 });
