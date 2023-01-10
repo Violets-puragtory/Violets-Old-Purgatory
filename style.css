@@ -4,6 +4,8 @@
     --grid-color: rgb(100, 0, 255);
     --bg-color: rgb(11, 10, 50);
     --primary-color: blueviolet;
+    --back-size: 75px;
+    --bg-speed: 1s;
 }
 
 * {
@@ -35,21 +37,26 @@ body {
     justify-content:center;
     align-items:center;
     background: linear-gradient(to right, var(--grid-color) 2px, transparent 1px), linear-gradient(to top, var(--grid-color) 2px, transparent 1px);
-    background-size: 75px 75px;
+    background-size: var(--back-size) var(--back-size);
     background-repeat: repeat;
     animation-name: idle;
-    animation-duration: 500s;
+    animation-duration: var(--bg-speed);
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    background-position: 250vw 250vh;
+    background-position: 0px 0px;
 }
 
 #maindiv {
-    background-color: rgb(5, 0, 75);
-    max-width: 90vw;
+    background-color: rgba(5, 0, 75, 0.7);
+    max-width: 98vw;
     border: 2px rgb(255, 255, 255) solid;
     padding: 2%;
     transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    max-height: 100vh;
+    overflow-y: scroll;
+    animation-name: spawn;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #maindiv > div:not(#buttons, #mainpage) {
@@ -74,7 +81,7 @@ hr {
 }
 
 #buttons > button {
-    width: 200px;
+    width: 6.5rem;
     overflow-x: hidden;
 }
 
@@ -130,15 +137,6 @@ button:disabled {
     border-color: black;
 }
 
-@keyframes idle {
-    0%{
-        background-position: 250vw 250vh;
-    }
-    100% {
-        background-position: 5000vw 5000vh;
-    }
-}
-
 .chip {
     border-radius: 15px;
     background-color: var(--primary-color);
@@ -153,4 +151,25 @@ button:disabled {
     vertical-align: middle;
     margin: 0;
     padding: 0;
+}
+
+@keyframes idle {
+    0%{
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: var(--back-size) var(--back-size);
+    }
+}
+
+@keyframes spawn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
 }

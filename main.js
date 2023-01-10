@@ -59,17 +59,17 @@ if (which == 'bgsetting') {
         if (usecookies == true) {
             Cookies.set('bgsetting', 'false')
         }
-        $("#backdiv").css('animation-name', 'no')
-        $("#bganim").text('Animate Background: False')
+        $("#backdiv").css('animation-play-state', 'paused')
+        $("#bganim").text('Background: Static')
         $("#bganim").css('background-color', 'red')
     } else {
         bganim = 'true'
         if (usecookies == true) {
             Cookies.set('bgsetting', 'true')
         }
-        $("#bganim").text('Animate Background: True')
+        $("#bganim").text('Background: Moving')
         $("#bganim").css('background-color', 'green')
-        $("#backdiv").css('animation-name', 'idle')
+        $("#backdiv").css('animation-play-state', 'running')
 
     }
 }
@@ -93,13 +93,6 @@ if (which == 'bgsetting') {
 }
 
 $(window).on('load', function () {
-    if (Cookies.get('EnableCookies') == 'true') {
-        usecookies = false
-        enablecookies()
-    } else {
-        usecookies = true
-        enablecookies()
-    }
 
     if (Cookies.get('bgsetting') != null) {
         bganim = Cookies.get('bgsetting')
@@ -110,13 +103,13 @@ $(window).on('load', function () {
     }
 
     if (Cookies.get('bgsetting') == 'false') {
-        $("#backdiv").css('animation-name', 'no')
-        $("#bganim").text('Animate Background: False')
+        $("#backdiv").css('animation-play-state', 'paused')
+        $("#bganim").text('Background: Static')
         $("#bganim").css('background-color', 'red')
     } else {
-        $("#bganim").text('Animate Background: True')
+        $("#bganim").text('Background: Moving')
         $("#bganim").css('background-color', 'green')
-        $("#backdiv").css('animation-name', 'idle')
+        $("#backdiv").css('animation-play-state', 'running')
     }
 
     if (spamquotes == 'true') {
@@ -138,5 +131,13 @@ $(window).on('load', function () {
         $("#quotes").text('fun')
         $("#quotesbutton").text('Spam Quotes: False')
         $("#quotesbutton").css('background-color', 'red')
+    }
+    
+    if (Cookies.get('EnableCookies') == 'true') {
+        usecookies = false
+        enablecookies()
+    } else {
+        usecookies = true
+        enablecookies()
     }
 });
