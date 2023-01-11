@@ -26,44 +26,57 @@
 
 <body>
     <div id="backdiv">
-        <div id="maindiv">
-            <div id="settings">
-                <button id="cookiebutton" onclick="enablecookies()">Use Cookies: False</button>
-                <button onclick="
-                if($('#cookiestooltip').css('display') == 'none') {
-                    $('#cookiestooltip').show(1000)
-                } else {
-                    $('#cookiestooltip').hide(1000)
-                }
-                ">click me for explanation...</button>
-                <p id="cookiestooltip" style="font-size: 1.25rem; display: none;">This website will not share your cookies or use your data. Cookies on this website are purely used to save settings and are completely optional! If you have cookies off, some settings will be darkened, meaning they cannot be modified unless cookies are on. <b>This only applies to minor settings that require refreshing the page.</b></p>
-                <h1><hr></h1>
-                <button id="quotesbutton" onclick="setting('spamquotes')">Spam Quotes: True</button>
-                <button id="bganim" onclick="setting('bgsetting')">Background: Moving</button>
+            <div id="maindiv">
+                <div id="ProjectsPage">
+                    <h1>Testing Testing Testing blah blah</h1>
+                </div>
+                <div id="LinksPage">
+                    <h1>Socials<hr></h1>
+                    <p>Discord: Violet#1111</p>
+                    <hr><h1>Links<hr></h1>
+                    <a href="violets-purgatory.dev">Main Website</a>
+                    <a href="violets-puragtory.github.io">Testing Website</a>
+                </div>
+                <div id="settings">
+                    <button id="cookiebutton" onclick="enablecookies()">Use Cookies: False</button>
+                    <button onclick="
+                    if($('#cookiestooltip').css('display') == 'none') {
+                        $('#cookiestooltip').show(1000)
+                    } else {
+                        $('#cookiestooltip').hide(1000)
+                    }
+                    ">click me for explanation...</button>
+                    <p id="cookiestooltip" style="font-size: 1.25rem; display: none;">This website will not share your cookies or use your data. Cookies on this website are purely used to save settings and are completely optional! If you have cookies off, some settings will be darkened, meaning they cannot be modified unless cookies are on. <b>This only applies to minor settings that require refreshing the page.</b></p>
+                    <h1><hr></h1>
+                    <button id="quotesbutton" onclick="setting('spamquotes')">Spam Quotes: True</button>
+                    <button id="bganim" onclick="setting('bgsetting')">Background: Moving</button>
+                </div>
+                <div id="AboutMePage">
+                    <h1>About Me!!!!
+                        <hr>
+                    </h1>
+                    <p>My name is Violet. I'm a generic queer blue haired non-binary who wastes their time on stupid coding projects they'll never complete! :D<br>Right now, im working on a game in lua for Roblox, this website, and a tauri application. Soon, I will be moving my work off of Roblox and onto Godot. I am mainly waiting for the stable version of 4.0 to release.</p>
+                </div>
+                <div id="mainpage">
+                    <h1>Welcome to Violet's Purgatory!
+                        <hr>
+                    </h1>
+                    <p id="welcometext">A website designed so terribly, that the <span id="quotes">fun</span> <strike>(it's not fun)</strike> of it is figuring
+                        out how to navigate it in the first place!</p>
+    
+                </div>
+                <div id="buttons">
+                    <button class="flex-fill" id="optionsbutton" onclick="NavMenu($('#settings'), $('#optionsbutton'))">Options</button>
+                    <!--<button class="flex-fill" id="mainbutton"
+                        onclick="NavMenu($('#mainpage'), $('#mainbutton'))">Main</button>-->
+                    <button class="flex-fill" id="linksbutton"
+                    onclick="NavMenu($('#LinksPage'), $('#linksbutton'))">Socials</button>
+                    <button class="flex-fill" id="projectsbutton"
+                    onclick="NavMenu($('#ProjectsPage'), $('#projectsbutton'))">Projects</button>
+                    <button class="flex-fill" id="aboutmebutton"
+                        onclick="NavMenu($('#AboutMePage'), $('#aboutmebutton'))">About Me</button>
+                </div>
             </div>
-            <div id="AboutMePage">
-                <h1>About Me!!!!
-                    <hr>
-                </h1>
-                <p>My name is Violet. I'm a generic queer blue haired non-binary who wastes their time on stupid coding projects they'll never complete! :D<br>Right now, im working on a game in lua for Roblox, this website, and a tauri application. Soon, I will be moving my work off of Roblox and onto Godot. I am mainly waiting for the stable version of 4.0 to release.</p>
-            </div>
-            <div id="mainpage">
-                <h1>Welcome to Violet's Purgatory!
-                    <hr>
-                </h1>
-                <p id="welcometext">A website designed so terribly, that the <span id="quotes">fun</span> <strike>(it's not fun)</strike> of it is figuring
-                    out how to navigate it in the first place!</p>
-
-            </div>
-            <div id="buttons">
-                <button class="flex-fill" id="optionsbutton" onclick="NavMenu($('#settings'), $('#optionsbutton'))">Options</button>
-                <!--<button class="flex-fill" id="mainbutton"
-                    onclick="NavMenu($('#mainpage'), $('#mainbutton'))">Main</button>-->
-                <button class="flex-fill" id="linksbutton">Socials</button>
-                <button class="flex-fill" id="aboutmebutton"
-                    onclick="NavMenu($('#AboutMePage'), $('#aboutmebutton'))">About Me</button>
-            </div>
-        </div>
     </div>
 </body>
 

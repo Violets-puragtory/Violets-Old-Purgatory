@@ -53,10 +53,11 @@ body {
     padding: 2%;
     transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
     max-height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: show;
     animation-name: spawn;
-    animation-duration: 5s;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
 }
 
 #maindiv > div:not(#buttons, #mainpage) {
@@ -81,7 +82,7 @@ hr {
 }
 
 #buttons > button {
-    width: 6.5rem;
+    min-width: 6.5rem;
     overflow-x: hidden;
 }
 
@@ -165,11 +166,16 @@ button:disabled {
 @keyframes spawn {
     0% {
         opacity: 0;
-        transform: scale(0);
+        translate: 100vw;
+    }
+
+    70% {
+        opacity: 1;
+        translate: -15vw;
     }
 
     100% {
         opacity: 1;
-        transform: scale(1)
+        translate: 0vw;
     }
 }
