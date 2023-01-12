@@ -48,7 +48,8 @@ body {
 
 #maindiv {
     background-color: rgba(5, 0, 75, 0.7);
-    width: 98vw;
+    max-width: 98vw;
+    min-width: 250px;
     border: 2px rgb(255, 255, 255) solid;
     padding: 2%;
     transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
