@@ -37,13 +37,14 @@ function enablecookies() {
         $("#quotesbutton").css('color', 'white')
         $("#cookiebutton").text('Use Cookies: False')
         $("#cookiebutton").css('background-color', 'red')
+        $("#openanimbut").css('background-color', 'black')
+        $("#openanimbut").css('color', 'white')
         usecookies = false
         Cookies.remove('EnableCookies')
         Cookies.remove('QuoteSpam')
         Cookies.remove('bgsetting')
+        Cookies.remove('openanim')
     } else {
-        $("#quotesbutton").css('background-color', 'green')
-        $("#quotesbutton").css('color', 'white')
 
         $("#cookiebutton").text('Use Cookies: True')
         $("#cookiebutton").css('background-color', 'green')
@@ -53,26 +54,39 @@ function enablecookies() {
 }
 
 function setting(which) {
-if (which == 'bgsetting') {
-    if (bganim == 'true') {
-        bganim = 'false'
-        if (usecookies == true) {
-            Cookies.set('bgsetting', 'false')
-        }
-        $("#backdiv").css('animation-play-state', 'paused')
-        $("#bganim").text('Background: Static')
-        $("#bganim").css('background-color', 'red')
-    } else {
-        bganim = 'true'
-        if (usecookies == true) {
-            Cookies.set('bgsetting', 'true')
-        }
-        $("#bganim").text('Background: Moving')
-        $("#bganim").css('background-color', 'green')
-        $("#backdiv").css('animation-play-state', 'running')
 
+    if (which == 'openanim' && usecookies) {
+        if (Cookies.get('openanim') == 'true' | Cookies.get('openanim') == true) {
+            Cookies.set('openanim', 'false')
+            $("#openanimbut").text('Opening Animation: False')
+            $("#openanimbut").css('background-color', 'red')
+        } else {
+            Cookies.set('openanim', 'true')
+            $("#openanimbut").text('Opening Animation: True')
+            $("#openanimbut").css('background-color', 'green')
+        }
     }
-}
+
+    if (which == 'bgsetting') {
+        if (bganim == 'true') {
+            bganim = 'false'
+            if (usecookies == true) {
+                Cookies.set('bgsetting', 'false')
+            }
+            $("#backdiv").css('animation-play-state', 'paused')
+            $("#bganim").text('Background: Static')
+            $("#bganim").css('background-color', 'red')
+        } else {
+            bganim = 'true'
+            if (usecookies == true) {
+                Cookies.set('bgsetting', 'true')
+            }
+            $("#bganim").text('Background: Moving')
+            $("#bganim").css('background-color', 'green')
+            $("#backdiv").css('animation-play-state', 'running')
+
+        }
+    }
     if (which == 'spamquotes' && usecookies == true) {
         if (spamquotes == 'true') {
             if (usecookies == true) {
@@ -93,11 +107,27 @@ if (which == 'bgsetting') {
 }
 
 $(window).on('load', function () {
+    if (Cookies.get('openanim') == 'true' | Cookies.get('openanim') == true) {
+        $("#openanimbut").text('Opening Animation: False')
+        $("#openanimbut").css('background-color', 'red')
+    } else {
+        $("#openanimbut").text('Opening Animation: True')
+        $("#openanimbut").css('background-color', 'green')
+    }
+
+    if (Cookies.get('openanim') == 'false' | Cookies.get('openanim') == false) {
+        $("#maindiv").css('animation-name', 'nooooooooooooooooooooooooooooooo')
+        $("#maindiv").css('visibility', 'visible')
+    } else {
+        setTimeout(() => {
+            $("#maindiv").css('visibility', 'visible')
+        }, 100);
+    }
 
     if (Cookies.get('bgsetting') != null) {
         bganim = Cookies.get('bgsetting')
     }
-    
+
     if (Cookies.get('QuoteSpam') != null) {
         spamquotes = Cookies.get('QuoteSpam')
     }
@@ -132,7 +162,7 @@ $(window).on('load', function () {
         $("#quotesbutton").text('Spam Quotes: False')
         $("#quotesbutton").css('background-color', 'red')
     }
-    
+
     if (Cookies.get('EnableCookies') == 'true') {
         usecookies = false
         enablecookies()

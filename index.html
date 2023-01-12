@@ -40,16 +40,17 @@
                 <div id="settings">
                     <button id="cookiebutton" onclick="enablecookies()">Use Cookies: False</button>
                     <button onclick="
-                    if($('#cookiestooltip').css('display') == 'none') {
-                        $('#cookiestooltip').show(1000)
+                    if($('#cookiestooltip').css('visibility') == 'hidden') {
+                        $('#cookiestooltip').css('visibility', 'visible')
                     } else {
-                        $('#cookiestooltip').hide(1000)
+                        $('#cookiestooltip').css('visibility', 'hidden')
                     }
                     ">click me for explanation...</button>
-                    <p id="cookiestooltip" style="font-size: 1.25rem; display: none;">This website will not share your cookies or use your data. Cookies on this website are purely used to save settings and are completely optional! If you have cookies off, some settings will be darkened, meaning they cannot be modified unless cookies are on. <b>This only applies to minor settings that require refreshing the page.</b></p>
+                    <p id="cookiestooltip" style="font-size: 1.25rem; visibility: hidden; max-width: 80vw; align-items: center; margin: auto;">This website will not share your cookies or use your data. Cookies on this website are purely used to save settings and are completely optional! If you have cookies off, some settings will be darkened, meaning they cannot be modified unless cookies are on. <b>This only applies to minor settings that require refreshing the page.</b></p>
                     <h1><hr></h1>
                     <button id="quotesbutton" onclick="setting('spamquotes')">Spam Quotes: True</button>
                     <button id="bganim" onclick="setting('bgsetting')">Background: Moving</button>
+                    <button id="openanimbut" onclick="setting('openanim')">Opening Animation: True</button>
                 </div>
                 <div id="AboutMePage">
                     <h1>About Me!!!!

@@ -47,6 +47,7 @@ body {
 }
 
 #maindiv {
+    visibility: hidden;
     background-color: rgba(5, 0, 75, 0.7);
     max-width: 98vw;
     min-width: 250px;
@@ -59,6 +60,7 @@ body {
     animation-name: spawn;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
+    animation-delay: 0.1s;
 }
 
 #maindiv > div:not(#buttons, #mainpage) {
@@ -168,14 +170,16 @@ button:disabled, a:disabled {
 
 @keyframes spawn {
     0% {
-        translate: 100vw;
+        translate: 0 100vw;
+        rotate: 360deg 1 1 1;
     }
 
     65% {
-        translate: -15vw;
+        translate: 0 -15vw;
     }
 
     100% {
-        translate: 0vw;
+        translate: 0 0vw;
+        rotate: 0deg;
     }
 }
