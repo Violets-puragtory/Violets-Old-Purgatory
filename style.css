@@ -48,7 +48,7 @@ body {
 
 #maindiv {
     background-color: rgba(5, 0, 75, 0.7);
-    max-width: 98vw;
+    width: 98vw;
     border: 2px rgb(255, 255, 255) solid;
     padding: 2%;
     transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -86,7 +86,8 @@ hr {
     overflow-x: hidden;
 }
 
-button {
+button, a {
+    color: white;
     display: inline-flexbox;
     margin: auto;
     text-decoration: none;
@@ -116,14 +117,14 @@ button {
     margin: 0 !important;
 }
 
-button:hover {
+button:hover, a:hover {
     transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
     transform: scale(1);
     border-color: white;
     background-color: blueviolet;
 }
 
-button:active {
+button:active, a:active{
     transition: all 0s cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: white;
     color: black;
@@ -131,7 +132,8 @@ button:active {
     border-color: blueviolet;
 }
 
-button:disabled {
+button:disabled, a:disabled {
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: white;
     color: black;
     transform: scale(1);
@@ -165,17 +167,14 @@ button:disabled {
 
 @keyframes spawn {
     0% {
-        opacity: 0;
         translate: 100vw;
     }
 
-    70% {
-        opacity: 1;
+    65% {
         translate: -15vw;
     }
 
     100% {
-        opacity: 1;
         translate: 0vw;
     }
 }
